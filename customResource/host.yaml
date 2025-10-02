@@ -1,0 +1,24 @@
+apiVersion: fadk8sctrl.fortinet.com/v1alpha1
+kind: Host
+metadata:
+  name: minimal-host
+  annotations: {
+    "fortiadc-ip" : "172.23.133.185",
+    "fortiadc-login" : "fad-login",
+    "fortiadc-ctrl-log" : "enable",
+    "fortiadc-admin-port": "443"
+   }
+spec:
+  hostname: www
+  domain: host1.com.
+  singleRecord: disable
+  persistence: disable
+  lbMethod: weight
+  feedbackIPv4: 0.0.0.1
+  fortiview: disable
+  virtualServerPools:
+    - name: vp1
+      topology:
+      isp:
+      weight: 1
+  vdom: root
