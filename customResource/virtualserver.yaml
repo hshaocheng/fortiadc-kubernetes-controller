@@ -3,7 +3,7 @@ kind: VirtualServer
 metadata:
   name: minimal-virtualserver
   annotations: {
-    "fortiadc-ip" : "172.23.133.185",
+    "fortiadc-ip" : "172.23.133.110",
     "fortiadc-login" : "fad-login",
     "fortiadc-ctrl-log" : "enable",
     "fortiadc-admin-port": "443"
