@@ -1,7 +1,7 @@
 apiVersion: fadk8sctrl.fortinet.com/v1alpha1
 kind: RemoteServer
 metadata:
-  name: minimal-remote-server
+  name: fortiadc-rs1
   annotations: {
     "fortiadc-ip" : "172.23.133.185",
     "fortiadc-login" : "fad-login",
@@ -10,12 +10,11 @@ metadata:
    }
 spec:
   serverType: FortiADC-SLB
-  authType: none
   addressType: ipv4
   ip: 127.0.0.1
   port: 5858
   dataCenter:
-    name: DEFAULT_DATA_CENTER
+    name: dc1
     location: ZZ
     description: test
   autoSync: enable
